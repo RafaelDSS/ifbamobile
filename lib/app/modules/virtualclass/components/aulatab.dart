@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suapifba/app/modules/virtualclass/models/virtualclass_model.dart';
+import 'package:ifbamobile/app/modules/virtualclass/models/virtualclass_model.dart';
 
 class AulaTabView extends StatelessWidget {
   final List<Aula>? aulas;
@@ -9,14 +9,12 @@ class AulaTabView extends StatelessWidget {
   Widget listAulas() {
     return SingleChildScrollView(
       child: Column(
-        children: aulas!.map(
-          (item) {
-            return ListTile(
-              title: Text(item.conteudo!),
-              subtitle: Text(formatter.format(item.data!)),
-            );
-          },
-        ).toList(),
+        children: aulas!.map((item) {
+          return ListTile(
+            title: Text(item.conteudo!),
+            subtitle: Text(formatter.format(item.data!)),
+          );
+        }).toList(),
       ),
     );
   }
@@ -32,8 +30,6 @@ class AulaTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: aulas!.isEmpty ? infoCenter() : listAulas(),
-    );
+    return Container(child: aulas!.isEmpty ? infoCenter() : listAulas());
   }
 }

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:suapifba/app/modules/home/stores/manage_auth_store.dart';
-import 'package:suapifba/app/shared/components/appbar_custom.dart';
+import 'package:ifbamobile/app/modules/home/stores/manage_auth_store.dart';
+import 'package:ifbamobile/app/shared/components/appbar_custom.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:suapifba/app/shared/components/snackbar_error.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -34,10 +33,7 @@ class _HomePageState extends State<HomePage> {
 
         if (!message.contains("primeiro_acesso")) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              backgroundColor: Colors.red,
-              content: Text(message),
-            ),
+            SnackBar(backgroundColor: Colors.red, content: Text(message)),
           );
         }
         Modular.to.navigate("/login/");
@@ -52,10 +48,11 @@ class _HomePageState extends State<HomePage> {
     manageAuthStore.destroy();
   }
 
-  Widget gridMenuItem(
-      {required String title,
-      required String imageFileName,
-      required Function onTap}) {
+  Widget gridMenuItem({
+    required String title,
+    required String imageFileName,
+    required Function onTap,
+  }) {
     return Card(
       margin: const EdgeInsets.all(10),
       elevation: 2,
@@ -127,13 +124,13 @@ class _HomePageState extends State<HomePage> {
                     Modular.to.pushNamed("/reportcard/");
                   },
                 ),
-                gridMenuItem(
-                  title: "Últimas Notícias",
-                  imageFileName: "undraw_news.svg",
-                  onTap: () {
-                    Modular.to.pushNamed("/news/");
-                  },
-                ),
+                // gridMenuItem(
+                //   title: "Últimas Notícias",
+                //   imageFileName: "undraw_news.svg",
+                //   onTap: () {
+                //     Modular.to.pushNamed("/news/");
+                //   },
+                // ),
               ],
             );
           }

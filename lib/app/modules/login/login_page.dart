@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:suapifba/app/modules/login/components/custom_formfield.dart';
-import 'package:suapifba/app/modules/login/stores/login_store.dart';
-import 'package:suapifba/app/shared/components/appbar_custom.dart';
+import 'package:ifbamobile/app/modules/login/components/custom_formfield.dart';
+import 'package:ifbamobile/app/modules/login/stores/login_store.dart';
+import 'package:ifbamobile/app/shared/components/appbar_custom.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -26,16 +26,19 @@ class _LoginState extends State<Login> {
   void initState() {
     super.initState();
 
-    _disposerLogin = loginStore.observer(onState: (state) {
-      Modular.to.navigate("/");
-    }, onError: (error) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          backgroundColor: Colors.red,
-          content: Text(loginStore.error.toString()),
-        ),
-      );
-    });
+    _disposerLogin = loginStore.observer(
+      onState: (state) {
+        Modular.to.navigate("/");
+      },
+      onError: (error) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.red,
+            content: Text(loginStore.error.toString()),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -92,7 +95,8 @@ class _LoginState extends State<Login> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          primary: Colors.green[400],
+                          // primary: Colors.green[400],
+                          backgroundColor: Colors.green[400],
                         ),
                         child: ScopedBuilder<LoginStore, Exception, bool>(
                           store: loginStore,
@@ -106,9 +110,9 @@ class _LoginState extends State<Login> {
                           ),
                           onLoading: (context) =>
                               const CircularProgressIndicator(
-                            backgroundColor: Colors.white,
-                            strokeWidth: 2.0,
-                          ),
+                                backgroundColor: Colors.white,
+                                strokeWidth: 2.0,
+                              ),
                           onError: (context, error) => Text(
                             'Acessar',
                             textAlign: TextAlign.center,
@@ -125,7 +129,7 @@ class _LoginState extends State<Login> {
                           }
                         },
                       ),
-                    )
+                    ),
                   ],
                 ),
               ],

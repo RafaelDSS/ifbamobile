@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suapifba/app/modules/virtualclass/models/virtualclass_model.dart';
+import 'package:ifbamobile/app/modules/virtualclass/models/virtualclass_model.dart';
 
 class ParticipantesTabView extends StatelessWidget {
   final List<Participante>? participantes;
@@ -25,40 +25,34 @@ class ParticipantesTabView extends StatelessWidget {
                 ),
               ),
               child: ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 8,
+                  horizontal: 6,
+                ),
                 leading: CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
                   backgroundImage: NetworkImage(
-                      'http://suap.ifba.edu.br${item.foto}',
-                      scale: 1.0),
+                    'http://suap.ifba.edu.br${item.foto}',
+                    scale: 1.0,
+                  ),
                 ),
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 2.0),
                   child: Text(
                     item.nome!,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 20,
-                    ),
+                    style: const TextStyle(color: Colors.grey, fontSize: 20),
                   ),
                 ),
                 subtitle: RichText(
                   text: TextSpan(
                     text: 'Matricula: ',
-                    style: const TextStyle(
-                      color: Colors.black87,
-                      fontSize: 16,
-                    ),
+                    style: const TextStyle(color: Colors.black87, fontSize: 16),
                     children: [
                       TextSpan(
                         text: item.matricula!,
-                        style: TextStyle(
-                          color: Colors.grey[600],
-                          fontSize: 15,
-                        ),
-                      )
+                        style: TextStyle(color: Colors.grey[600], fontSize: 15),
+                      ),
                     ],
                   ),
                 ),

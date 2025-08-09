@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:suapifba/app/modules/reportcard/reportcard_page.dart';
-import 'package:suapifba/app/modules/reportcard/stores/reportcard_store.dart';
-import 'package:suapifba/app/shared/repositories/period_repository.dart';
-import 'package:suapifba/app/shared/stores/period_store.dart';
+import 'package:ifbamobile/app/modules/reportcard/reportcard_page.dart';
+import 'package:ifbamobile/app/modules/reportcard/stores/reportcard_store.dart';
+import 'package:ifbamobile/app/shared/repositories/period_repository.dart';
+import 'package:ifbamobile/app/shared/stores/period_store.dart';
 
 import 'repositories/reportcard_repository.dart';
 

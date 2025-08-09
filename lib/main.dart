@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:suapifba/app/app_module.dart';
-import 'package:suapifba/app/app_widget.dart';
+import 'package:ifbamobile/app/app_module.dart';
+import 'package:ifbamobile/app/app_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

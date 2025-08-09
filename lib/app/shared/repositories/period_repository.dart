@@ -1,9 +1,8 @@
-import 'dart:developer';
 import 'package:dio/dio.dart';
-import 'package:suapifba/app/shared/helpers/custom_dio/custom_dio.dart';
-import 'package:suapifba/app/shared/models/period_model.dart';
+import 'package:ifbamobile/app/shared/helpers/custom_dio/custom_dio.dart';
+import 'package:ifbamobile/app/shared/models/period_model.dart';
 
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
+import 'package:ifbamobile/app/shared/helpers/constants.dart' as config;
 
 class PeriodRepository {
   final CustomDio dio;

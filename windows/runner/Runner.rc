@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.br.suapifba" "\0"
-            VALUE "FileDescription", "suapifba" "\0"
+            VALUE "CompanyName", "br.com.ifbamobile" "\0"
+            VALUE "FileDescription", "ifbamobile" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "suapifba" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.br.suapifba. All rights reserved." "\0"
-            VALUE "OriginalFilename", "suapifba.exe" "\0"
-            VALUE "ProductName", "suapifba" "\0"
+            VALUE "InternalName", "ifbamobile" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 br.com.ifbamobile. All rights reserved." "\0"
+            VALUE "OriginalFilename", "ifbamobile.exe" "\0"
+            VALUE "ProductName", "ifbamobile" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

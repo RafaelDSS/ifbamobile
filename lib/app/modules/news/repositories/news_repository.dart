@@ -1,9 +1,9 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:suapifba/app/modules/news/models/news.dart';
+import 'package:ifbamobile/app/modules/news/models/news.dart';
 
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
+import 'package:ifbamobile/app/shared/helpers/constants.dart' as config;
 
 class NewsRepository {
   Future<List<NewsModel>> fetchNews() async {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:suapifba/app/modules/virtualclass/components/aulatab.dart';
-import 'package:suapifba/app/modules/virtualclass/components/materialtab.dart';
-import 'package:suapifba/app/modules/virtualclass/components/participantestab.dart';
-import 'package:suapifba/app/modules/virtualclass/models/virtualclass_model.dart';
+import 'package:ifbamobile/app/modules/virtualclass/components/aulatab.dart';
+import 'package:ifbamobile/app/modules/virtualclass/components/materialtab.dart';
+import 'package:ifbamobile/app/modules/virtualclass/components/participantestab.dart';
+import 'package:ifbamobile/app/modules/virtualclass/models/virtualclass_model.dart';
 
 class TabBarViewClass extends StatefulWidget {
   final VirtualClassModel? virtualclass;
@@ -20,24 +20,21 @@ class _TabBarViewClassState extends State<TabBarViewClass> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.green,
           title: Tooltip(
             triggerMode: TooltipTriggerMode.tap,
             message: widget.virtualclass!.componenteCurricular!.split(' - ')[1],
             child: Text(
-                'Turma Virtual - ${widget.virtualclass!.componenteCurricular!.split(' - ')[0]}'),
+              'Turma Virtual - ${widget.virtualclass!.componenteCurricular!.split(' - ')[0]}',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
           bottom: const TabBar(
             isScrollable: true,
             tabs: <Widget>[
-              Text(
-                'Participantes',
-              ),
-              Tab(
-                text: 'Aulas',
-              ),
-              Tab(
-                text: 'Materiais',
-              )
+              Text('Participantes'),
+              Tab(text: 'Aulas'),
+              Tab(text: 'Materiais'),
             ],
           ),
         ),
@@ -46,12 +43,8 @@ class _TabBarViewClassState extends State<TabBarViewClass> {
             ParticipantesTabView(
               participantes: widget.virtualclass!.participantes,
             ),
-            AulaTabView(
-              aulas: widget.virtualclass!.aulas,
-            ),
-            MaterialTabView(
-              materiais: widget.virtualclass!.materiaisDeAula,
-            )
+            AulaTabView(aulas: widget.virtualclass!.aulas),
+            MaterialTabView(materiais: widget.virtualclass!.materiaisDeAula),
           ],
         ),
       ),

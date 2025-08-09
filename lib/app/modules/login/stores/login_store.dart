@@ -1,6 +1,6 @@
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:suapifba/app/shared/repositories/localstorage_repository.dart';
-import 'package:suapifba/app/modules/login/repositories/login_repository.dart';
+import 'package:ifbamobile/app/shared/repositories/localstorage_repository.dart';
+import 'package:ifbamobile/app/modules/login/repositories/login_repository.dart';
 
 class LoginStore extends StreamStore<Exception, bool> {
   final LoginRepository loginRepository;
@@ -9,8 +9,10 @@ class LoginStore extends StreamStore<Exception, bool> {
   LoginStore(this.loginRepository, this.localStorage) : super(false);
 
   login(String matricula, String senha) {
-    execute(() async => localStorage.saveToken(
-          await loginRepository.fethToken(matricula, senha),
-        ));
+    execute(
+      () async => localStorage.saveToken(
+        await loginRepository.fethToken(matricula, senha),
+      ),
+    );
   }
 }

@@ -1,8 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
-import 'package:suapifba/app/shared/helpers/custom_dio/interceptor_auth.dart';
+import 'package:ifbamobile/app/shared/helpers/custom_dio/interceptor_auth.dart';
 
 class CustomDio {
   final Dio client;

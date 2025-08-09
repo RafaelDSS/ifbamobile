@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
 
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
+import 'package:ifbamobile/app/shared/helpers/constants.dart' as config;
 
 class ManageAuthRepository {
   final Dio dio;
@@ -18,9 +18,7 @@ class ManageAuthRepository {
             HttpHeaders.acceptHeader: 'application/json',
           },
         ),
-        data: {
-          'token': token,
-        },
+        data: {'token': token},
       );
 
       if (response.statusCode == 200 && response.data.isNotEmpty) {

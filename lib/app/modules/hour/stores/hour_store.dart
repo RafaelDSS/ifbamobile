@@ -1,7 +1,7 @@
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:suapifba/app/modules/virtualclass/models/virtualclasses_model.dart';
-import 'package:suapifba/app/modules/virtualclass/repositories/virtualclasses_repository.dart';
-import 'package:suapifba/app/modules/hour/models/hour_model.dart';
+import 'package:ifbamobile/app/modules/virtualclass/models/virtualclasses_model.dart';
+import 'package:ifbamobile/app/modules/virtualclass/repositories/virtualclasses_repository.dart';
+import 'package:ifbamobile/app/modules/hour/models/hour_model.dart';
 
 const Map nomesTurnoEhorario = {
   "M": [
@@ -12,8 +12,8 @@ const Map nomesTurnoEhorario = {
       '08:50 - 09:35',
       '09:35 - 10:20',
       '10:30 - 11:15',
-      '11:15 - 12:00'
-    ]
+      '11:15 - 12:00',
+    ],
   ],
   "V": [
     "VESPERTINO",
@@ -23,8 +23,8 @@ const Map nomesTurnoEhorario = {
       '14:40 - 15:30',
       '15:30 - 16:20',
       '16:40 - 17:30',
-      '17:30 - 18:20'
-    ]
+      '17:30 - 18:20',
+    ],
   ],
   "N": [
     "NOTURNO",
@@ -34,9 +34,9 @@ const Map nomesTurnoEhorario = {
       '18:30 - 19:20',
       '19:20 - 20:10',
       '20:20 - 21:10',
-      '21:10 - 22:00'
-    ]
-  ]
+      '21:10 - 22:00',
+    ],
+  ],
 };
 
 HourModel processHoursClass(List<VirtualClassesModel> classes) {
@@ -79,8 +79,10 @@ class HourStore extends StreamStore<Exception, HourModel> {
   HourStore(this.virtualClassesRepository) : super(HourModel("", []));
 
   getHour(String period) {
-    execute(() => virtualClassesRepository
-        .fethData(period)
-        .then((response) => processHoursClass(response)));
+    execute(
+      () => virtualClassesRepository
+          .fethData(period)
+          .then((response) => processHoursClass(response)),
+    );
   }
 }

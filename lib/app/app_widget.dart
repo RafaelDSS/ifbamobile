@@ -11,6 +11,7 @@ class AppWidget extends StatelessWidget {
       title: 'IFBA Mobile',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        primaryColor: Colors.green,
         fontFamily: "Poppins1",
       ),
       routeInformationParser: Modular.routeInformationParser,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suapifba/app/shared/models/period_model.dart';
+import 'package:ifbamobile/app/shared/models/period_model.dart';
 
 class DropDownMenu extends StatefulWidget {
   final List<Period>? items;
@@ -27,10 +27,7 @@ class _DropDownMenuState extends State<DropDownMenu> {
         isExpanded: true,
         items: widget.items!.map((period) {
           final semestre = '${period.anoLetivo}/${period.periodoLetivo}';
-          return DropdownMenuItem(
-            value: semestre,
-            child: Text(semestre),
-          );
+          return DropdownMenuItem(value: semestre, child: Text(semestre));
         }).toList(),
         onChanged: (String? itemSelected) {
           setState(() {

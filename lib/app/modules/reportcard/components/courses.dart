@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suapifba/app/modules/reportcard/models/reportcard_model.dart';
+import 'package:ifbamobile/app/modules/reportcard/models/reportcard_model.dart';
 
 class Courses extends StatelessWidget {
   final List<ReportCardModel>? reportCard;
@@ -9,8 +9,7 @@ class Courses extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView(
-          children: reportCard!.map(
-        (item) {
+        children: reportCard!.map((item) {
           return ExpansionTile(
             leading: const Icon(Icons.note),
             title: Text(
@@ -35,7 +34,7 @@ class Courses extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text('Situação: ${item.situacao.toString()}'),
-                          Text('Faltas: ${item.numeroFaltas}')
+                          Text('Faltas: ${item.numeroFaltas}'),
                         ],
                       ),
                       Column(
@@ -45,17 +44,17 @@ class Courses extends StatelessWidget {
                           Text('Média: ${item.mediaDisciplina}'),
                           Text(
                             'Frequência: ${item.percentualCargaHorariaFrequentada?.round()}%',
-                          )
+                          ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           );
-        },
-      ).toList()),
+        }).toList(),
+      ),
     );
   }
 }

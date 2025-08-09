@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
-import 'package:suapifba/app/modules/hour/components/hour_table.dart';
-import 'package:suapifba/app/modules/hour/models/hour_model.dart';
-import 'package:suapifba/app/modules/hour/stores/hour_store.dart';
-import 'package:suapifba/app/shared/components/appbar_custom.dart';
-import 'package:suapifba/app/shared/components/dropdownmenu.dart';
-import 'package:suapifba/app/shared/components/modal_progress.dart';
-import 'package:suapifba/app/shared/helpers/advertisement.dart';
-import 'package:suapifba/app/shared/models/period_model.dart';
-import 'package:suapifba/app/shared/helpers/store_observer.dart';
-import 'package:suapifba/app/shared/stores/period_store.dart';
+import 'package:ifbamobile/app/modules/hour/components/hour_table.dart';
+import 'package:ifbamobile/app/modules/hour/models/hour_model.dart';
+import 'package:ifbamobile/app/modules/hour/stores/hour_store.dart';
+import 'package:ifbamobile/app/shared/components/appbar_custom.dart';
+import 'package:ifbamobile/app/shared/components/dropdownmenu.dart';
+import 'package:ifbamobile/app/shared/components/modal_progress.dart';
+import 'package:ifbamobile/app/shared/helpers/advertisement.dart';
+import 'package:ifbamobile/app/shared/models/period_model.dart';
+import 'package:ifbamobile/app/shared/helpers/store_observer.dart';
+import 'package:ifbamobile/app/shared/stores/period_store.dart';
 
 class HourPage extends StatefulWidget {
   const HourPage({Key? key}) : super(key: key);
@@ -86,10 +86,10 @@ class _HourPageState extends State<HourPage> {
                     ? Container()
                     : HourTable(hourModel: state),
                 onError: (context, error) => Container(),
-              )
+              ),
             ],
           ),
-          isLoading ? const ModalProgress() : Container()
+          isLoading ? const ModalProgress() : Container(),
         ],
       ),
     );

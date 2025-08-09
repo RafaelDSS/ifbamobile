@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:suapifba/app/shared/repositories/localstorage_repository.dart';
+import 'package:ifbamobile/app/shared/repositories/localstorage_repository.dart';
 
-PreferredSizeWidget appBarDefault(
-    {String title = '', bool actionVisible = false}) {
+PreferredSizeWidget appBarDefault({
+  String title = '',
+  bool actionVisible = false,
+}) {
   return AppBar(
+    backgroundColor: Colors.green,
     actions: <Widget>[
       Visibility(
         visible: actionVisible,
@@ -18,7 +21,7 @@ PreferredSizeWidget appBarDefault(
         ),
       ),
     ],
-    title: Text(title),
+    title: Text(title, style: TextStyle(color: Colors.white)),
     centerTitle: true,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(

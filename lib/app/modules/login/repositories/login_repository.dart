@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
 
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
+import 'package:ifbamobile/app/shared/helpers/constants.dart' as config;
 
 class LoginRepository {
   final Dio dio;
@@ -18,10 +18,7 @@ class LoginRepository {
             HttpHeaders.acceptHeader: 'application/json',
           },
         ),
-        data: {
-          "username": matricula,
-          "password": password,
-        },
+        data: {"username": matricula, "password": password},
       );
 
       if (response.statusCode == 200 && response.data.isNotEmpty) {
@@ -32,7 +29,8 @@ class LoginRepository {
         throw Exception("Suas informações de login estão incorretas.");
       }
       throw Exception(
-          "Você deve está com algum problema de conexão ou o servidor do SUAP está fora do ar.");
+        "Você deve está com algum problema de conexão ou o servidor do SUAP está fora do ar.",
+      );
     }
     throw Exception("Ocorreu um error ao fazer seu login.");
   }

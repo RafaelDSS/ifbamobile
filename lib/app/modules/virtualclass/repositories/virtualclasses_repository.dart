@@ -1,8 +1,8 @@
 import 'dart:developer';
-import 'package:suapifba/app/modules/virtualclass/models/virtualclasses_model.dart';
-import 'package:suapifba/app/shared/helpers/custom_dio/custom_dio.dart';
+import 'package:ifbamobile/app/modules/virtualclass/models/virtualclasses_model.dart';
+import 'package:ifbamobile/app/shared/helpers/custom_dio/custom_dio.dart';
 
-import 'package:suapifba/app/shared/helpers/constants.dart' as config;
+import 'package:ifbamobile/app/shared/helpers/constants.dart' as config;
 
 class VirtualClassesRepository {
   final CustomDio dio;
@@ -21,8 +21,6 @@ class VirtualClassesRepository {
     } catch (e) {
       log(e.toString());
     }
-    throw Exception(
-      "Houve um problema ao requisitar os dados.",
-    );
+    throw Exception("Houve um problema ao requisitar os dados.");
   }
 }
