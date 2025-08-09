@@ -1,16 +1,22 @@
-# ifbamobile
+# IFBA Mobile
 
-A new Flutter project.
+App desenvolvido em Flutter baseado na API do SUAP.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### Features.
+- Horários de aula.
+- Boletim.
+- Turmas virtuais.
+    - Visualização dos alunos de uma turma virtual.
+    - Visualização dos materiais de uma turma virtual.
+    - Visualização das aulas ministradas de uma turma virtual.
+- Últimas notícias.
 
-A few resources to get you started if this is your first Flutter project:
+### Instruções para executar o projeto.
+```shell
+flutter pub get
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screenshots.
+[![banner-github.png](https://i.postimg.cc/mk3T5v1T/banner-github.png)](https://postimg.cc/Cn1yZ642)
