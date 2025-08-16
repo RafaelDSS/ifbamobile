@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarDefault(title: "SUAP", actionVisible: actionVisibleLogout),
+      appBar: appBarDefault(title: "Menu", actionVisible: actionVisibleLogout),
       body: TripleBuilder<ManageAuthStore, Exception, bool>(
         store: manageAuthStore,
         builder: (context, triple) {

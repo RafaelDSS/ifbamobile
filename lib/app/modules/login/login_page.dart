@@ -61,8 +61,8 @@ class _LoginState extends State<Login> {
               children: <Widget>[
                 const SizedBox(height: 70.0),
                 Image.asset(
-                  'assets/images/logo-login.png',
-                  height: 70.0,
+                  'assets/images/login.png',
+                  height: 150.0,
                   fit: BoxFit.scaleDown,
                 ),
                 const SizedBox(height: 60.0),

@@ -1,4 +1,4 @@
-package br.com.ifbamobile.ifbamobile
+package com.br.suapifba
 
 import io.flutter.embedding.android.FlutterActivity
 

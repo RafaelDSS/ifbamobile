@@ -1,4 +1,4 @@
-# IFBA Mobile
+# IF Estudantil – Bahia
 
 App desenvolvido em Flutter baseado na API do SUAP.
 

@@ -8,7 +8,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'IFBA Mobile',
+      title: 'IF Estudantil – Bahia',
       theme: ThemeData(
         primarySwatch: Colors.green,
         primaryColor: Colors.green,
